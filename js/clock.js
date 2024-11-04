@@ -2,13 +2,14 @@
 
 let userName = prompt("Adınız Nedir?");
 
-// Boş değer veya iptal durumu kontrolü
 if (userName) {
   const myNameDOM = document.querySelector("#myName");
   myNameDOM.innerHTML = `${userName}`;
 } else {
   alert("Lütfen geçerli bir isim giriniz.");
 }
+
+const clockDOM = document.querySelector("#myClock");
 
 // Days of the week in Turkish
 
@@ -39,5 +40,4 @@ function showTime() {
 setInterval(showTime, 1000);
 
 // Initial call to display the time immediately
-const clockDOM = document.querySelector("#myClock");
 showTime();
